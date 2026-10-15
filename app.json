@@ -32,7 +32,14 @@
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 76
         }
-      ]
+      ],
+      ["expo-font", {
+        "fonts": [
+          "./src/assets/fonts/Pretendard-Regular.ttf",
+          "./src/assets/fonts/Pretendard-Medium.ttf",
+          "./src/assets/fonts/Pretendard-SemiBold.ttf"
+        ]
+      }]
     ],
     "experiments": {
       "typedRoutes": true,
