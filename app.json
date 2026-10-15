@@ -33,13 +33,16 @@
           "imageWidth": 76
         }
       ],
-      ["expo-font", {
-        "fonts": [
-          "./src/assets/fonts/Pretendard-Regular.ttf",
-          "./src/assets/fonts/Pretendard-Medium.ttf",
-          "./src/assets/fonts/Pretendard-SemiBold.ttf"
-        ]
-      }]
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./src/assets/fonts/Pretendard-Regular.ttf",
+            "./src/assets/fonts/Pretendard-Medium.ttf",
+            "./src/assets/fonts/Pretendard-SemiBold.ttf"
+          ]
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true,

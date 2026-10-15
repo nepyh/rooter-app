@@ -7,11 +7,8 @@ module.exports = {
       colors: require('./src/constants/color'),
       spacing: require('./src/constants/token/spacing'),
       borderRadius: require('./src/constants/token/radius'),
-      fontFamily: {
-        regular:  ["Pretendard-Regular"],
-        medium:   ["Pretendard-Medium"],
-        semibold: ["Pretendard-SemiBold"],
-      },
+      fontFamily: require('./src/constants/token/font-family'),
+      fontSize: require('./src/constants/token/font-size'),
     },
   },
   plugins: [],
