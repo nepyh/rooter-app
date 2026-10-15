@@ -1,7 +1,7 @@
 name: 🐞 Bug
 description: 오류·크래시가 발생하였습니다.
 labels: '🐞 Bug'
-title: "[Bug] "
+title: '[Bug] '
 body:
   - type: input
     attributes:
@@ -14,7 +14,7 @@ body:
       label: ✅ 재현법
       description: 이 버그나 문제를 재현하는 명확한 과정이 있다면 작성
       value: |
-        - [ ] 
+        - [ ]
     validations:
       required: false
   - type: textarea

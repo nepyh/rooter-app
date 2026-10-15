@@ -1,0 +1,97 @@
+import { useState } from 'react';
+import { Pressable, PressableProps } from 'react-native';
+import { Text } from './Text';
+
+// ================================
+// Types
+// ================================
+
+export type Variant = 'primary' | 'white' | 'black' | 'disabled';
+type Width = 'full' | 'auto';
+
+// ================================
+// Styles
+// ================================
+
+interface VariantProps {
+  default: string;
+  pressed: string;
+  textColor: string;
+}
+
+const variantStyles: Record<Variant, VariantProps> = {
+  primary: {
+    default: 'bg-primary-500',
+    pressed: 'bg-primary-600',
+    textColor: 'text-text-primary',
+  },
+  white: {
+    default: 'bg-neutral-0',
+    pressed: 'bg-neutral-100',
+    textColor: 'text-neutral-1000',
+  },
+  black: {
+    default: 'bg-neutral-1000',
+    pressed: 'bg-neutral-1000',
+    textColor: 'text-text-primary',
+  },
+  disabled: {
+    default: 'bg-neutral-700',
+    pressed: 'bg-neutral-800',
+    textColor: 'text-text-primary',
+  },
+};
+
+const widthStyles: Record<Width, string> = {
+  full: 'w-full',
+  auto: 'w-auto',
+};
+
+// ================================
+// Components
+// ================================
+
+interface Props extends PressableProps {
+  variant?: Variant;
+  width?: Width;
+  children?: React.ReactNode;
+  className?: string;
+}
+
+/**
+ * Button 컴포넌트
+ * @param variant 버튼 타입을 설정합니다.
+ * @param width 버튼 width를 설정합니다.
+ */
+export function Button({
+  variant = 'primary',
+  width = 'full',
+  children,
+  className = '',
+  disabled,
+  ...props
+}: Props) {
+  const [pressed, setPressed] = useState(false);
+  // variant="disabled"는 기본적으로 눌리지 않는 버튼(폼 검증 게이팅)이지만,
+  // 취소처럼 항상 눌려야 하는 버튼도 같은 회색 스타일을 쓰므로 disabled를 명시하면 그 값을 우선합니다.
+  const isDisabled = disabled ?? variant === 'disabled';
+
+  return (
+    <Pressable
+      disabled={isDisabled}
+      onPressIn={() => setPressed(true)}
+      onPressOut={() => setPressed(false)}
+      className={`
+        py-xl flex-row gap-m items-center justify-center rounded-xl
+        ${widthStyles[width]}
+        ${pressed ? variantStyles[variant].pressed : variantStyles[variant].default}
+        ${className}
+      `}
+      {...props}
+    >
+      <Text variant="base-medium" weight="medium" className={variantStyles[variant].textColor}>
+        {children}
+      </Text>
+    </Pressable>
+  );
+}
