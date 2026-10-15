@@ -37,7 +37,7 @@ export const Input = forwardRef<TextInput, Props>(
     return (
       <Stack gap="s">
         <View
-          className={`p-xl w-full gap-xxs rounded-md bg-neutral-700 ${focused ? 'border-2 border-primary-500' : 'p-xl border-2 border-transparent'} ${errorMessage && 'border-2 border-utility-error-primary'}`}
+          className={`p-spacing-6 w-full gap-spacing-1 rounded-radius-2 bg-neutral-700 ${focused ? 'border-2 border-primary-500' : 'p-spacing-6 border-2 border-transparent'} ${errorMessage && 'border-2 border-utility-error-primary'}`}
         >
           {label && (
             <Text variant="base-caption" weight="medium" color="secondary">

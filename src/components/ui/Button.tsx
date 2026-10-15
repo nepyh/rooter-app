@@ -82,7 +82,7 @@ export function Button({
       onPressIn={() => setPressed(true)}
       onPressOut={() => setPressed(false)}
       className={`
-        py-xl flex-row gap-m items-center justify-center rounded-xl
+        py-spacing-6 flex-row gap-spacing-4 items-center justify-center rounded-radius-3
         ${widthStyles[width]}
         ${pressed ? variantStyles[variant].pressed : variantStyles[variant].default}
         ${className}
