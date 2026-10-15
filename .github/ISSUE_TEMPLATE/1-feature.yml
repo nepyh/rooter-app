@@ -1,7 +1,7 @@
 name: ✨ Feature
 description: 새로운 기능을 추가합니다.
 labels: '✨ Feature'
-title: "[Feat] "
+title: '[Feat] '
 body:
   - type: input
     attributes:
@@ -14,7 +14,7 @@ body:
       label: ✅ 할 일
       description: 이 기능을 만들기 위해 해야 하는 것들
       value: |
-        - [ ] 
+        - [ ]
     validations:
       required: true
   - type: textarea
