@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "rooter-v2",
-    "slug": "rooter-v2",
+    "name": "rooter",
+    "slug": "rooter",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "rooterv2",
+    "scheme": "rooter",
     "userInterfaceStyle": "automatic",
     "ios": {
       "icon": "./assets/expo.icon"
