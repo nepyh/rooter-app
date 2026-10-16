@@ -1,12 +1,17 @@
+const size = (fontSize, lineHeight, letterSpacing) => [
+  `${fontSize}px`,
+  { lineHeight: `${lineHeight / fontSize}`, letterSpacing },
+];
+
 module.exports = {
-  xs: ['12px', { lineHeight: '14px', letterSpacing: '-0.12px' }],
-  sm: ['15px', { lineHeight: '18px', letterSpacing: '-0.15px' }],
-  base: ['17px', { lineHeight: '20px', letterSpacing: '-0.17px' }],
-  m: ['18px', { lineHeight: '22px', letterSpacing: '-0.18px' }],
-  lg: ['19px', { lineHeight: '22px', letterSpacing: '-0.19px' }],
-  xl: ['20px', { lineHeight: '24px', letterSpacing: '-0.20px' }],
-  '2xl': ['22px', { lineHeight: '28px', letterSpacing: '-0.22px' }],
-  '3xl': ['24px', { lineHeight: '30px', letterSpacing: '-0.24px' }],
-  '4xl': ['28px', { lineHeight: '34px', letterSpacing: '-0.28px' }],
-  '5xl': ['34px', { lineHeight: '42px', letterSpacing: '-0.34px' }],
+  xs: size(12, 14, '-0.12px'),
+  sm: size(15, 18, '-0.15px'),
+  base: size(17, 20, '-0.17px'),
+  m: size(18, 22, '-0.18px'),
+  lg: size(19, 22, '-0.19px'),
+  xl: size(20, 24, '-0.20px'),
+  '2xl': size(22, 28, '-0.22px'),
+  '3xl': size(24, 30, '-0.24px'),
+  '4xl': size(28, 34, '-0.28px'),
+  '5xl': size(34, 42, '-0.34px'),
 };
