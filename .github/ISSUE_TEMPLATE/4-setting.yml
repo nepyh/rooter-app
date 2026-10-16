@@ -1,7 +1,7 @@
 name: ⚙️ Setting
 description: 설정 관련 기능을 추가·수정합니다.
 labels: '⚙️ Setting'
-title: '[Setting] '
+title: '[Setting]: '
 body:
   - type: input
     attributes:

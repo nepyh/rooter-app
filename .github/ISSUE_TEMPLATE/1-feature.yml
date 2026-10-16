@@ -1,7 +1,7 @@
 name: ✨ Feature
 description: 새로운 기능을 추가합니다.
 labels: '✨ Feature'
-title: '[Feat] '
+title: '[Feat]: '
 body:
   - type: input
     attributes:

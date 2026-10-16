@@ -1,7 +1,7 @@
 name: 🔨 Refactor
 description: 동작 변경 없이 코드 구조·가독성·성능을 개선합니다.
 labels: '🔨 Refactor'
-title: '[Refactor] '
+title: '[Refactor]: '
 body:
   - type: input
     attributes:
